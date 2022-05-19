@@ -16,14 +16,14 @@ struct ContentView: View {
                 List {
                     ForEach(drawings){drawing in
                         NavigationLink(destination: DrawingView(id: drawing.id, data: drawing.canvasData, title: drawing.title), label: {
-                            Text(drawing.title ?? "Dia XX")
+                            Text(drawing.title ?? "Untiled")
                         })
                     }
                     .onDelete(perform: deleteItem)
                 }
                 .listStyle(.insetGrouped)
                 .navigationTitle(Text("Try21"))
-                EditButton()
+//                EditButton()
                 Button(action: {
                     self.showSheet.toggle()
 //                    self.buttonTapped.toggle()
